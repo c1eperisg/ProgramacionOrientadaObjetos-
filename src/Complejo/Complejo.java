@@ -66,6 +66,6 @@ public class Complejo {
 	}
 	
 	public void print(){
-		System.out.println("La parte real es:" +  getReal() + " y la imaginaria " + getImaginaria() + "i.");
+		System.out.println("La parte real es:" +  getReal() + " y la imaginaria " + getImaginaria());
 	}
 }
