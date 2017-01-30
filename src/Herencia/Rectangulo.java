@@ -1,34 +1,37 @@
 package Herencia;
 
-public class Triangulo extends Figura{
-	
+public class Rectangulo extends Figura{
+
 	private double base;
 	private double altura;
 	
-	public Triangulo(double b, double a){
+	public Rectangulo(double b, double a){
 		
 		base = b;
 		altura = a;
-		lado= base;
-		//Atributo Figura
-		numeroDeLados = 3;
+		
+		//Atributo Fgura
+		numeroDeLados = 4;
 		
 		//Variable global
 		numeroDeFiguras++;
 		
 	}
+	public double perimetro(){
+		return base*2+altura*2;
+	}
 	
 	public double area(){
-		return base*altura/2;
+		return base*altura;
 	}
 	
 	public String toString(){
 		return "Valores del Triangulo:\n" + 
-				"------------------------\n" +
+			   "------------------------" +
 			   "Base = " + base + "\n" + 
 			   "Altura = " + altura + "\n" + 
 			   "Area = " + area() + "\n" +
-			   "Perimetro = " + perimetro() + "\n" +  
+			   "Perimetro = " + perimetro() + "\n" +
 			   "Numero de Lados = " + numeroDeLados + "\n" +
 			   "Figuras Totales = " + numeroDeFiguras;
 	}

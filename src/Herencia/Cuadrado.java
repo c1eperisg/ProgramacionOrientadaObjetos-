@@ -8,7 +8,7 @@ public class Cuadrado extends Figura{
 		
 		lado = b;
 		
-		//Atributo Fgura
+		//Atributo Figura
 		numeroDeLados = 4;
 		
 		//Variable global
@@ -18,12 +18,14 @@ public class Cuadrado extends Figura{
 	public double area(){
 		return lado*2;
 	}
+
 	
 	public String toString(){
 		return "Valores del Cuadrado:\n" + 
-			   "------------------------" +
+				"------------------------\n" +
 			   "Lado = " + lado + "\n" + 
 			   "Area = " + area() + "\n" +
+			   "Perimetro = " + perimetro() + "\n" + 
 			   "Numero de Lados = " + numeroDeLados + "\n" +
 			   "Figuras Totales = " + numeroDeFiguras;
 	}
