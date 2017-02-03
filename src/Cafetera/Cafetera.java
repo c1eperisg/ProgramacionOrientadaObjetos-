@@ -5,21 +5,24 @@ public class Cafetera {
 	private int capacidadMaxima;
 	private int cantidadActual;
 	
-	private Cafetera(){
+	public Cafetera(){
 		this.cantidadActual=0;
 		this.capacidadMaxima=1000;
 	}
 	
-	private void CafeteraMax(){
-		this.capacidadMaxima=1000;
+	public Cafetera(int capacidadMaxima){
+		this.capacidadMaxima=capacidadMaxima;
 		this.cantidadActual=this.capacidadMaxima;
 		
 	}
 	
-	private void Cafetera(int capacidadMaxima, int capacidadActual){
+	public Cafetera(int capacidadMaxima, int capacidadActual){
 		if(capacidadActual>capacidadMaxima){
 			this.capacidadMaxima=capacidadMaxima;
 			this.cantidadActual=this.capacidadMaxima;
+		}else{
+			this.capacidadMaxima=capacidadMaxima;
+			this.cantidadActual=capacidadActual;
 		}
 	}
 	

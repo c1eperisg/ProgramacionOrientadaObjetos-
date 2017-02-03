@@ -1,32 +1,34 @@
 package CuentBancaria;
 
+import NIF.NIF;
+
 public class Cuenta {
 
 	private int numCuenta;
-	private int DNI;
+	private NIF DNI;
 	private double saldo;
 	private double intAnual;
-	private int contCuenta=  100001;
+	public int contCuenta= 0;
 	
 	public Cuenta(){
-		this.numCuenta=contCuenta;
+		this.numCuenta= 100001+contCuenta;
 		contCuenta++;
-		this.DNI=0;
+		this.DNI=new NIF();
 		this.saldo=0.0;
 		this.intAnual=0.0;
 		
 	}
 	
-	public Cuenta(int DNI, double saldo, double intAnual){
+	public Cuenta(double saldo,int DNI, double intAnual){
 		this.numCuenta=contCuenta;
 		contCuenta++;
-		this.DNI=DNI;
+		this.DNI=new NIF(DNI);
 		this.saldo=saldo;
 		this.intAnual=intAnual;
 	}
 	
 	public void setDNI(int num){
-		this.DNI=num;
+		this.DNI=new NIF(num);
 	}
 	public void setsaldo(int num){
 		this.saldo=num;
@@ -38,7 +40,7 @@ public class Cuenta {
 		return this.numCuenta;
 	}
 	public int getDNI(){
-		return this.DNI;
+		return this.DNI.getNIF();
 	}
 	public double getsaldo(){
 		return this.saldo;
