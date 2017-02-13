@@ -1,11 +1,13 @@
 package Fecha;
 
 import java.util.GregorianCalendar;
+import java.time.*;
 
 import miLibreria.tester;
 
 public class Fecha {
 	private GregorianCalendar fecha;
+	private LocalDate fechaLocalDate;
 	
 	public Fecha(){
 		fecha= new GregorianCalendar(1900,1,1);
@@ -13,6 +15,10 @@ public class Fecha {
 	
 	public Fecha(int anyo, int mes, int dia){
 		fecha= new GregorianCalendar(anyo,mes,dia);
+	}
+	
+	public Fecha(int anyo, int mes, int dia){
+		fecha = new LocalDate(anyo,mes,dia);
 	}
 	
 	public void leer(){
@@ -25,18 +31,9 @@ public class Fecha {
 	}
 	
 	public int diasMes(int mes){
-		int[] diasMeses = {31,28,31,30,31,30,31,31,30,31,30,31};
-		if(mes==1){
-			if(fecha.isLeapYear(this.fecha.YEAR)==true){
-				return diasMeses[mes] + 1;
-			}else{
-				return diasMeses[mes];
-			}
-		}else{
-			return diasMeses[mes];
-		}
+		
+		return fechaLocalDate.lengthOfMonth();
+	
 	}
-	
-	
  
 }
